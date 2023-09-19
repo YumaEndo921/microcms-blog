@@ -40,5 +40,5 @@ import { dateFormat } from "~/utils/dateFormat";
 const { data } = await useMicroCMSGetList<Blog>({
   endpoint: "blogs",
 });
-console.log(data);
+// console.log(data);
 </script>
