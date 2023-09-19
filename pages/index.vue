@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-center font-sans text-4xl font-semibold">
-    Nuxt3 Jamstack Blogs
+    Nuxt3 Jamstack Blogs(change)
   </h1>
   <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
