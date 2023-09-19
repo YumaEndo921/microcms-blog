@@ -62,5 +62,6 @@ async function handleSubmit() {
     },
     body: { subject: subject.value, name: name.value, message: message.value },
   });
+  console.log("success");
 }
 </script>
