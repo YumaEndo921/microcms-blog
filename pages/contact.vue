@@ -36,6 +36,7 @@
           />
         </dt>
       </dl>
+      <p>{{ errors }}</p>
       <button
         class="border-4 p-2 border-gray-400"
         type="button"
@@ -43,33 +44,23 @@
       >
         送信する
       </button>
+      <NuxtLink to="/">
+        <button class="border-4 p-2 border-gray-400 mt-10 ml-8" type="button">
+          戻る
+        </button>
+      </NuxtLink>
     </form>
   </div>
 </template>
 
 <script setup lang="ts">
-import { createClient } from "microcms-js-sdk";
-
 const subject = ref();
 const name = ref();
 const message = ref();
+const errors = ref();
 
-// const runtimeConfig = useRuntimeConfig();
-
-// async function handleSubmit() {
-//   await client
-//     .create({
-//       endpoint: "contact",
-//       content: {
-//         subject: subject.value,
-//         name: name.value,
-//         message: message.value,
-//       },
-//     })
-//     .then((res) => console.log(res.id));
-// }
-function handleSubmit() {
-  useFetch("/api/test", {
+async function handleSubmit() {
+  const { error, status } = await useFetch("/api/test", {
     method: "post",
     body: {
       subject: subject.value,
@@ -77,18 +68,15 @@ function handleSubmit() {
       message: message.value,
     },
   });
-  console.log("test成功");
+  if (status.value === "error") {
+    console.log("エラー");
+    errors.value = error.value;
+  } else {
+    console.log("test成功");
+    errors.value = "送信成功";
+    subject.value = "";
+    name.value = "";
+    message.value = "";
+  }
 }
-
-// async function handleSubmit() {
-//   await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//       "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
-//     },
-//     body: { subject: subject.value, name: name.value, message: message.value },
-//   });
-//   console.log("success");
-// }
 </script>

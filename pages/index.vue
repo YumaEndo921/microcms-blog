@@ -31,6 +31,11 @@
       </NuxtLink>
     </li>
   </ul>
+  <NuxtLink to="/contact">
+    <button class="border-4 p-2 border-gray-400 mt-10" type="button">
+      問い合わせ
+    </button>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
