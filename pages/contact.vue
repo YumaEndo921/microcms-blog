@@ -56,11 +56,6 @@ const message = ref();
 
 // const runtimeConfig = useRuntimeConfig();
 
-// const client = createClient({
-//   serviceDomain: "testing-nuxt3",
-//   apiKey: "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
-// });
-
 // async function handleSubmit() {
 //   await client
 //     .create({
