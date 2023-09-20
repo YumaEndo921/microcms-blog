@@ -14,10 +14,7 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography],
     },
   },
-  // runtimeConfig: {
-  //   apiKey: NUXT_API_KEY,
-  //   public: {
-  //     apiKey: process.env.NODE_ENV !== "production" ? NUXT_API_KEY : undefined,
-  //   },
-  // },
+  routeRules: {
+    "/pages/contact.vue": { ssr: true },
+  },
 });
