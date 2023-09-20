@@ -15,6 +15,6 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/pages/contact.vue": { ssr: true },
+    "/pages/contact": { ssr: true },
   },
 });
