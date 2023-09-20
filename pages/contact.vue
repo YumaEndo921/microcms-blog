@@ -48,20 +48,48 @@
 </template>
 
 <script setup lang="ts">
-import axios from "axios";
+import { createClient } from "microcms-js-sdk";
+
+const runtimeConfig = useRuntimeConfig();
+
+const client = createClient({
+  serviceDomain: "testing-nuxt3",
+  apiKey: runtimeConfig.public.apiKey,
+});
+
+async function handleSubmit() {
+  await client
+    .create({
+      endpoint: "contact",
+      content: {
+        subject: subject.value,
+        name: name.value,
+        message: message.value,
+      },
+    })
+    .then((res) => console.log(res.id));
+}
+
+// const runtimeConfig = useRuntimeConfig();
+// console.log("test", runtimeConfig.microCMS);
+
+// .envによるランタイム構成の上書き
+// console.log(runtimeConfig.serviceDomain);
+console.log(runtimeConfig.public.apiKey);
+
 const subject = ref();
 const name = ref();
 const message = ref();
 
-async function handleSubmit() {
-  await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
-    },
-    body: { subject: subject.value, name: name.value, message: message.value },
-  });
-  console.log("success");
-}
+// async function handleSubmit() {
+//   await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//       "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
+//     },
+//     body: { subject: subject.value, name: name.value, message: message.value },
+//   });
+//   console.log("success");
+// }
 </script>

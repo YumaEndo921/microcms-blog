@@ -4181,7 +4181,7 @@ methods@^1.1.2:
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"
   integrity sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==
 
-microcms-js-sdk@^2.5.0:
+microcms-js-sdk@^2.5.0, microcms-js-sdk@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/microcms-js-sdk/-/microcms-js-sdk-2.6.1.tgz#6e7441900662a2178561654ea12dee90e04a0273"
   integrity sha512-wTAZF6+IeZbF9ZWhxRmCK2+FN5/BGj3YsPRzYSUVNKtgGkFvIiKBfOvESmXfanaGrE21cd92qpvHSUnszWQv7w==
