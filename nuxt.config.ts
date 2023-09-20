@@ -14,9 +14,9 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography],
     },
   },
-  // routeRules: {
-  //   "/": { ssr: true, prerender: true },
-  //   "/test.vue": { ssr: true, prerender: true },
-  //   "/[id].vue": { ssr: true, prerender: true },
-  // },
+  routeRules: {
+    "/": { ssr: true, prerender: true },
+    "/test.vue": { ssr: true, prerender: true },
+    "/[id].vue": { ssr: true, prerender: true },
+  },
 });
