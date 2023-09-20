@@ -17,4 +17,5 @@ export default defineNuxtConfig({
   routeRules: {
     "/pages/contact": { ssr: true },
   },
+  //
 });
