@@ -50,6 +50,10 @@
 <script setup lang="ts">
 import { createClient } from "microcms-js-sdk";
 
+const subject = ref();
+const name = ref();
+const message = ref();
+
 const runtimeConfig = useRuntimeConfig();
 
 const client = createClient({
@@ -57,29 +61,31 @@ const client = createClient({
   apiKey: runtimeConfig.public.apiKey,
 });
 
-async function handleSubmit() {
-  await client
-    .create({
-      endpoint: "contact",
-      content: {
-        subject: subject.value,
-        name: name.value,
-        message: message.value,
-      },
-    })
-    .then((res) => console.log(res.id));
+// async function handleSubmit() {
+//   await client
+//     .create({
+//       endpoint: "contact",
+//       content: {
+//         subject: subject.value,
+//         name: name.value,
+//         message: message.value,
+//       },
+//     })
+//     .then((res) => console.log(res.id));
+// }
+function handleSubmit() {
+  useFetch("/api/test", {
+    method: "post",
+    body: {
+      subject: subject.value,
+      name: name.value,
+      message: message.value,
+    },
+  });
+  console.log("test成功");
 }
 
-// const runtimeConfig = useRuntimeConfig();
-// console.log("test", runtimeConfig.microCMS);
-
-// .envによるランタイム構成の上書き
-// console.log(runtimeConfig.serviceDomain);
-console.log(runtimeConfig.public.apiKey);
-
-const subject = ref();
-const name = ref();
-const message = ref();
+// console.log(runtimeConfig.public.apiKey);
 
 // async function handleSubmit() {
 //   await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
