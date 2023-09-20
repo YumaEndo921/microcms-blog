@@ -54,12 +54,12 @@ const subject = ref();
 const name = ref();
 const message = ref();
 
-const runtimeConfig = useRuntimeConfig();
+// const runtimeConfig = useRuntimeConfig();
 
-const client = createClient({
-  serviceDomain: "testing-nuxt3",
-  apiKey: runtimeConfig.public.apiKey,
-});
+// const client = createClient({
+//   serviceDomain: "testing-nuxt3",
+//   apiKey: "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
+// });
 
 // async function handleSubmit() {
 //   await client
@@ -84,8 +84,6 @@ function handleSubmit() {
   });
   console.log("test成功");
 }
-
-console.log(runtimeConfig.public.apiKey);
 
 // async function handleSubmit() {
 //   await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
