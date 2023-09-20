@@ -85,7 +85,7 @@ function handleSubmit() {
   console.log("test成功");
 }
 
-// console.log(runtimeConfig.public.apiKey);
+console.log(runtimeConfig.public.apiKey);
 
 // async function handleSubmit() {
 //   await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
