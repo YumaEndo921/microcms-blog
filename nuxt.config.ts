@@ -18,5 +18,6 @@ export default defineNuxtConfig({
     "/index.vue": { ssr: true, prerender: true },
     "/test.vue": { ssr: true, prerender: true },
     "/[id].vue": { ssr: true, prerender: true },
+    "/contact.vue": { ssr: true, prerender: true },
   },
 });
