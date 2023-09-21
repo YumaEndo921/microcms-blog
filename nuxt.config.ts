@@ -15,9 +15,9 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/": { ssr: true, prerender: true },
-    "/test": { ssr: true, prerender: true },
-    "/[id]": { ssr: true, prerender: true },
+    "/": { ssr: false },
+    "/test": { ssr: false },
+    "/[id]": { ssr: false },
     "/contact": { ssr: true, prerender: true },
   },
   // nitro: {
