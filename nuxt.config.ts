@@ -20,7 +20,7 @@ export default defineNuxtConfig({
     "/[id]": { ssr: true, prerender: true },
     "/contact": { ssr: true, prerender: false },
   },
-  nitro: {
-    preset: "vercel",
-  },
+  // nitro: {
+  //   preset: "netlify",
+  // },
 });
