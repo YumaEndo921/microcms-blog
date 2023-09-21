@@ -36,20 +36,26 @@
       問い合わせ
     </button>
   </NuxtLink>
+  <!-- <button
+    class="border-4 p-2 border-gray-400"
+    type="button"
+    @click="handleSubmit"
+  >
+    送信する
+  </button> -->
 </template>
 
 <script setup lang="ts">
 import { Blog } from "../types/blog";
 import { dateFormat } from "~/utils/dateFormat";
 
-const { data } = await useMicroCMSGetList<Blog>({
-  endpoint: "blogs",
-});
+// const { data } = await useMicroCMSGetList<Blog>({
+//   endpoint: "blogs",
+// });
+const { data } = await useFetch("/api/test2");
 
 // async function handleSubmit() {
-//   const { error, status } = await useFetch("/api/test2", {
-//     method: "get",
-//   });
+//   const { data } = await useFetch("/api/test2");
 //   if (status.value === "error") {
 //     console.log("エラー");
 //   } else {

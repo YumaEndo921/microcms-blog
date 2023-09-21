@@ -1,6 +1,5 @@
-export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
-  const res = await $fetch("https://testing-nuxt3.microcms.io/api/v1/blog", {
+export default defineEventHandler(async () => {
+  const res = await $fetch("https://testing-nuxt3.microcms.io/api/v1/blogs", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
