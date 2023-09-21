@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     "/": { ssr: true, prerender: true },
     "/test": { ssr: true, prerender: true },
     "/[id]": { ssr: true, prerender: true },
-    "/contact": { ssr: true, prerender: false },
+    "/contact": { ssr: true, prerender: true },
   },
   // nitro: {
   //   preset: "vercel",
