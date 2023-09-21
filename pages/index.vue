@@ -45,4 +45,15 @@ import { dateFormat } from "~/utils/dateFormat";
 const { data } = await useMicroCMSGetList<Blog>({
   endpoint: "blogs",
 });
+
+// async function handleSubmit() {
+//   const { error, status } = await useFetch("/api/test2", {
+//     method: "get",
+//   });
+//   if (status.value === "error") {
+//     console.log("エラー");
+//   } else {
+//     console.log("test成功");
+//   }
+// }
 </script>
