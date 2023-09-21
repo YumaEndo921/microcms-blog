@@ -15,10 +15,10 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    "/": { ssr: false },
-    "/test": { ssr: false },
-    "/[id]": { ssr: false },
-    "/contact": { ssr: true, prerender: true },
+    "/": { ssr: true, prerender: false },
+    "/test": { ssr: true, prerender: false },
+    "/[id]": { ssr: true, prerender: false },
+    "/contact": { ssr: true, prerender: false },
   },
   // nitro: {
   //   preset: "vercel",
