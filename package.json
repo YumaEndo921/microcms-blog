@@ -16,8 +16,10 @@
     "nuxt": "^3.7.3"
   },
   "dependencies": {
+    "@pinia/nuxt": "^0.4.11",
     "dayjs": "^1.11.9",
     "microcms-js-sdk": "^2.6.1",
-    "nuxt-microcms-module": "^3.0.2"
+    "nuxt-microcms-module": "^3.0.2",
+    "pinia": "^2.1.6"
   }
 }

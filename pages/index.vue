@@ -36,16 +36,33 @@
       問い合わせ
     </button>
   </NuxtLink>
+  <!-- {{ origin }} -->
+  <!-- <button @click="counter.counter++">button</button>
+  <NuxtLink to="page2">page2</NuxtLink> -->
+  <!-- <p>{{ $responce }}</p> -->
 </template>
 
 <script setup lang="ts">
 import { Blog } from "../types/blog";
 import { dateFormat } from "~/utils/dateFormat";
+import { useCounterStore } from "~/stores/counter";
 
-const { data } = await useMicroCMSGetList<Blog>({
-  endpoint: "blogs",
-});
+const { $responce } = useNuxtApp();
+const data = $responce;
+
+// const origin = useCounterStore();
+// const data: any = origin.res;
+
+// console.log(data);
+
+// const { data } = await useMicroCMSGetList<Blog>({
+//   endpoint: "blogs",
+// });
 // const { data } = await useFetch("/api/test2");
+// const { data } = useAsyncData("/", async () => {
+//   const { data } = await useFetch("/api/test2");
+//   return data;
+// });
 
 // async function handleSubmit() {
 //   const { data } = await useFetch("/api/test2");

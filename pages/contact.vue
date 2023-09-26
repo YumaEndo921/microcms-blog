@@ -50,10 +50,16 @@
         </button>
       </NuxtLink>
     </form>
+    <p>{{ data }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
+import { useCounterStore } from "~/stores/counter";
+
+const counter = useCounterStore();
+
+const { data } = useFetch("/api/hello");
 const subject = ref();
 const name = ref();
 const message = ref();
@@ -68,6 +74,14 @@ async function handleSubmit() {
       message: message.value,
     },
   });
+  // await $fetch("https://testing-nuxt3.microcms.io/api/v1/contact", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //     "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY as string,
+  //   },
+  //   body: { subject: subject.value, name: name.value, message: message.value },
+  // });
   if (status.value === "error") {
     console.log("エラー");
     errors.value = error.value;
