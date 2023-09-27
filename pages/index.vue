@@ -1,5 +1,5 @@
 <template>
-  <Day />
+  <!-- <Day /> -->
   <h1 class="text-center font-sans text-4xl font-semibold">
     Nuxt3 Jamstack Blogs(change)
   </h1>

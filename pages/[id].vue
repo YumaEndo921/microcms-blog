@@ -1,6 +1,6 @@
 <template>
   <template v-if="data">
-    <Day />
+    <!-- <Day /> -->
     <h1 class="text-3xl font-semibold">
       {{ data.title }}
     </h1>
@@ -19,9 +19,9 @@
       >
         {{ data.category?.name }}
       </div>
-      <!-- <div class="text-sm text-gray-700">
+      <div class="text-sm text-gray-700">
         {{ dateFormat(data.publishedAt ?? data.createdAt) }}
-      </div> -->
+      </div>
     </div>
     <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
   </template>
