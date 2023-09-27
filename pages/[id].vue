@@ -1,5 +1,6 @@
 <template>
   <template v-if="data">
+    <Day />
     <h1 class="text-3xl font-semibold">
       {{ data.title }}
     </h1>
@@ -18,9 +19,9 @@
       >
         {{ data.category?.name }}
       </div>
-      <div class="text-sm text-gray-700">
+      <!-- <div class="text-sm text-gray-700">
         {{ dateFormat(data.publishedAt ?? data.createdAt) }}
-      </div>
+      </div> -->
     </div>
     <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
   </template>
@@ -31,9 +32,19 @@ import { Blog } from "~~/types/blog";
 
 const { params } = useRoute();
 
-const { data } = await useMicroCMSGetListDetail<Blog>({
-  endpoint: "blogs",
-  contentId: Array.isArray(params.id) ? params.id[0] : params.id,
-});
+// const { data } = await useMicroCMSGetListDetail<Blog>({
+//   endpoint: "blogs",
+//   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
+// });
+
+const { data } = await useFetch<Blog>(
+  `https://testing-nuxt3.microcms.io/api/v1/blogs/${params.id}`,
+  {
+    headers: {
+      "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
+    },
+  }
+);
+
 // console.log(data);
 </script>
