@@ -1,6 +1,6 @@
 <template>
   <template v-if="data">
-    <!-- <Day /> -->
+    <Day />
     <h1 class="text-3xl font-semibold">
       {{ data.title }}
     </h1>
@@ -29,22 +29,21 @@
 
 <script setup lang="ts">
 import { Blog } from "~~/types/blog";
+console.log("This will be logged on the server only");
 
 const { params } = useRoute();
 
-// const { data } = await useMicroCMSGetListDetail<Blog>({
-//   endpoint: "blogs",
-//   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
-// });
+const { data } = await useMicroCMSGetListDetail<Blog>({
+  endpoint: "blogs",
+  contentId: Array.isArray(params.id) ? params.id[0] : params.id,
+});
 
-const { data } = await useFetch<Blog>(
-  `https://testing-nuxt3.microcms.io/api/v1/blogs/${params.id}`,
-  {
-    headers: {
-      "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
-    },
-  }
-);
-
-// console.log(data);
+// const { data } = await useFetch<Blog>(
+//   `https://testing-nuxt3.microcms.io/api/v1/blogs/${params.id}`,
+//   {
+//     headers: {
+//       "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
+//     },
+//   }
+// );
 </script>
