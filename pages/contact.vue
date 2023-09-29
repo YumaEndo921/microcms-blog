@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Day />
     <form>
       <dl>
         <dd><label for="subject">件名</label></dd>

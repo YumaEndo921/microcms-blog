@@ -31,6 +31,5 @@ export default defineNuxtConfig({
   },
   experimental: {
     payloadExtraction: true,
-    renderJsonPayloads: true,
   },
 });
