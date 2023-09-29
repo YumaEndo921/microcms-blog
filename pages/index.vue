@@ -37,7 +37,7 @@
       問い合わせ
     </button>
   </NuxtLink>
-  <p>ページで生成{{ yearMonth }}</p>
+  <p>ページで生成 : {{ yearMonth }}</p>
   <p>ページでインスタンス生成 : {{ today }}</p>
 </template>
 
