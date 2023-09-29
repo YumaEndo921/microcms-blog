@@ -32,11 +32,4 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true,
   },
-
-  // routeRules: {
-  //   "/": { prerender: true },
-  //   "/test": { ssr: true, prerender: true },
-  //   "/[id]": { ssr: true, prerender: true },
-  //   "/contact": { ssr: true, prerender: false },
-  // },
 });

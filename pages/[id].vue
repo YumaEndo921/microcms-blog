@@ -36,13 +36,4 @@ const { data } = await useMicroCMSGetListDetail<Blog>({
   endpoint: "blogs",
   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
 });
-
-// const { data } = await useFetch<Blog>(
-//   `https://testing-nuxt3.microcms.io/api/v1/blogs/${params.id}`,
-//   {
-//     headers: {
-//       "X-MICROCMS-API-KEY": "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
-//     },
-//   }
-// );
 </script>

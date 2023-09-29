@@ -37,16 +37,22 @@
       問い合わせ
     </button>
   </NuxtLink>
+  <p>ページで生成{{ yearMonth }}</p>
+  <p>ページでインスタンス生成 : {{ today }}</p>
 </template>
 
 <script setup lang="ts">
 import { Blog } from "../types/blog";
 import { dateFormat } from "~/utils/dateFormat";
 import { useCounterStore } from "~/stores/counter";
+import dayjs from "dayjs";
 
 const { data } = await useMicroCMSGetList<Blog>({
   endpoint: "blogs",
 });
+
+const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
+const today = new Date();
 
 // const { data } = await useFetch("/api/test2");
 // const { $responce } = useNuxtApp();
