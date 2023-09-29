@@ -37,7 +37,4 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true,
   },
-  // generate: {
-  //   routes: ["/", "/test", "/[id]"],
-  // },
 });
