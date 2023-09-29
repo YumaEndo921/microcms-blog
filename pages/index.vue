@@ -1,5 +1,4 @@
 <template>
-  <Day />
   <h1 class="text-center font-sans text-4xl font-semibold">
     Nuxt3 Jamstack Blogs(change)
   </h1>
@@ -37,8 +36,11 @@
       問い合わせ
     </button>
   </NuxtLink>
-  <p>コンポーネントで生成 : {{ yearMonth }}</p>
+  <Day />
+  <!-- 
+  <p>ページ内で生成 : {{ yearMonth }}</p>
   <p>ページでインスタンス生成 : {{ today }}</p>
+  <p>プラグインで生成 : {{ $day }}</p> -->
 </template>
 
 <script setup lang="ts">
@@ -51,8 +53,10 @@ const { data } = await useMicroCMSGetList<Blog>({
   endpoint: "blogs",
 });
 
-const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
-const today = new Date();
+// const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
+// const today = new Date();
+
+// const { $day } = useNuxtApp();
 
 // const { data } = await useFetch("/api/test2");
 // const { $responce } = useNuxtApp();

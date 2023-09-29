@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Day />
     <form>
       <dl>
         <dd><label for="subject">件名</label></dd>
@@ -58,7 +59,7 @@ import { useCounterStore } from "~/stores/counter";
 
 const counter = useCounterStore();
 
-const { data } = useFetch("/api/hello");
+// const { data } = useFetch("/api/hello");
 const subject = ref();
 const name = ref();
 const message = ref();

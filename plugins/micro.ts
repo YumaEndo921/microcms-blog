@@ -1,10 +1,11 @@
 import { Blog } from "../types/blog";
 import { dateFormat } from "~/utils/dateFormat";
+import dayjs from "dayjs";
 
 export default defineNuxtPlugin(async () => {
-  const { data } = await useMicroCMSGetList<Blog>({
-    endpoint: "blogs",
-  });
+  // const { data } = await useMicroCMSGetList<Blog>({
+  //   endpoint: "blogs",
+  // });
 
   // const res = await $fetch("https://testing-nuxt3.microcms.io/api/v1/blogs", {
   //   method: "GET",
@@ -14,10 +15,12 @@ export default defineNuxtPlugin(async () => {
   //   },
   // });
 
+  const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
+
   return {
-    provide: {
-      responce: data,
-      // responce: res,
-    },
+    // provide: {
+    //   responce: data,
+    //   day: yearMonth,
+    // },
   };
 });

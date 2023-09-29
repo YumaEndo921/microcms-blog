@@ -6,6 +6,6 @@ export default defineEventHandler(async () => {
       "X-MICROCMS-API-KEY": process.env.MICROCMS_API_KEY as string,
     },
   });
-  console.log("success");
+  console.log("test2,success");
   return res;
 });

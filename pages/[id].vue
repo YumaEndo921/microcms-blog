@@ -25,6 +25,11 @@
     </div>
     <div v-html="data.content" class="prose mt-6 md:mt-10"></div>
   </template>
+  <NuxtLink to="/">
+    <button class="border-4 p-2 border-gray-400 mt-10 ml-8" type="button">
+      戻る
+    </button>
+  </NuxtLink>
 </template>
 
 <script setup lang="ts">
