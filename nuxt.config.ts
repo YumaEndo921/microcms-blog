@@ -21,12 +21,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  // routeRules: {
-  //   "/": { prerender: true },
-  //   "/test": { ssr: true, prerender: true },
-  //   "/[id]": { ssr: true, prerender: true },
-  //   "/contact": { ssr: true, prerender: false },
-  // },
+
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -37,4 +32,11 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: true,
   },
+
+  // routeRules: {
+  //   "/": { prerender: true },
+  //   "/test": { ssr: true, prerender: true },
+  //   "/[id]": { ssr: true, prerender: true },
+  //   "/contact": { ssr: true, prerender: false },
+  // },
 });
