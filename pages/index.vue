@@ -1,4 +1,5 @@
 <template>
+  <Day />
   <h1 class="text-center font-sans text-4xl font-semibold">
     Nuxt3 Jamstack Blogs(change)
   </h1>
@@ -36,7 +37,7 @@
       問い合わせ
     </button>
   </NuxtLink>
-  <Day />
+
   <!-- 
   <p>ページ内で生成 : {{ yearMonth }}</p>
   <p>ページでインスタンス生成 : {{ today }}</p>
