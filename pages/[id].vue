@@ -29,7 +29,6 @@
 
 <script setup lang="ts">
 import { Blog } from "~~/types/blog";
-console.log("This will be logged on the server only");
 
 const { params } = useRoute();
 
