@@ -29,7 +29,7 @@ export default defineNuxtConfig({
       ignore: ["/contact"],
     },
   },
-  // experimental: {
-  //   payloadExtraction: true,
-  // },
+  experimental: {
+    payloadExtraction: true,
+  },
 });
