@@ -6,8 +6,7 @@ export default defineNuxtConfig({
   modules: ["nuxt-microcms-module", "@nuxtjs/tailwindcss", "@pinia/nuxt"],
   microCMS: {
     serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
-    // apiKey: process.env.MICROCMS_API_KEY,
-    apiKey: "FeWqlTlqu3vXjNmeNLvTaWssmEe0HwLOlW1X",
+    apiKey: process.env.MICROCMS_API_KEY,
   },
   tailwindcss: {
     config: {
@@ -21,16 +20,16 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
-  ssr:true,
+  // ssr:true,
 
-  // nitro: {
-  //   prerender: {
-  //     crawlLinks: true,
-  //     routes: ["/", "/test"],
-  //     ignore: ["/contact"],
-  //   },
-  // },
-  // experimental: {
-  //   payloadExtraction: true,
-  // },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/", "/test"],
+      ignore: ["/contact"],
+    },
+  },
+  experimental: {
+    payloadExtraction: true,
+  },
 });
