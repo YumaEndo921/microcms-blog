@@ -21,6 +21,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  ssr:true,
 
   // nitro: {
   //   prerender: {
