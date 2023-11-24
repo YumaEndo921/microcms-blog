@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { Blog } from "~~/types/blog";
+
+const { params } = useRoute();
+
+const { data } = await useMicroCMSGetListDetail<Blog>({
+  endpoint: "blogs",
+  contentId: Array.isArray(params.id) ? params.id[0] : params.id,
+});
+</script>
+
 <template>
   <template v-if="data">
     <Day />
@@ -32,13 +43,8 @@
   </NuxtLink>
 </template>
 
-<script setup lang="ts">
-import { Blog } from "~~/types/blog";
-
-const { params } = useRoute();
-
-const { data } = await useMicroCMSGetListDetail<Blog>({
-  endpoint: "blogs",
-  contentId: Array.isArray(params.id) ? params.id[0] : params.id,
-});
-</script>
+<style>
+h2 {
+  background-color: #00f;
+}
+</style>

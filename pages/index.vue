@@ -1,8 +1,25 @@
+<script setup lang="ts">
+import { Blog } from "../types/blog";
+import { dateFormat } from "~/utils/dateFormat";
+import { useCounterStore } from "~/stores/counter";
+import dayjs from "dayjs";
+
+const { data } = await useMicroCMSGetList<Blog>({
+  endpoint: "blogs",
+});
+
+// const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
+// const today = new Date();
+
+// const { $day } = useNuxtApp();
+
+// const { data } = await useFetch("/api/test2");
+// const { $responce } = useNuxtApp();
+// const data = $responce;
+</script>
 <template>
   <Day />
-  <h1 class="text-center font-sans text-4xl font-semibold">
-    Nuxt3 Jamstack Blogs(change)
-  </h1>
+  <h1 class="text-center font-sans text-4xl font-semibold">勉強まとめブログ</h1>
   <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink
@@ -43,23 +60,3 @@
   <p>ページでインスタンス生成 : {{ today }}</p>
   <p>プラグインで生成 : {{ $day }}</p> -->
 </template>
-
-<script setup lang="ts">
-import { Blog } from "../types/blog";
-import { dateFormat } from "~/utils/dateFormat";
-import { useCounterStore } from "~/stores/counter";
-import dayjs from "dayjs";
-
-const { data } = await useMicroCMSGetList<Blog>({
-  endpoint: "blogs",
-});
-
-// const yearMonth = dayjs().format("YYYY-MM-DD HH:mm:ss");
-// const today = new Date();
-
-// const { $day } = useNuxtApp();
-
-// const { data } = await useFetch("/api/test2");
-// const { $responce } = useNuxtApp();
-// const data = $responce;
-</script>

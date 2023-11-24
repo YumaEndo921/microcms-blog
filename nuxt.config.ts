@@ -22,14 +22,14 @@ export default defineNuxtConfig({
     },
   ],
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ["/", "/test"],
-      ignore: ["/contact"],
-    },
-  },
-  experimental: {
-    payloadExtraction: true,
-  },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ["/", "/test"],
+  //     ignore: ["/contact"],
+  //   },
+  // },
+  // experimental: {
+  //   payloadExtraction: true,
+  // },
 });
