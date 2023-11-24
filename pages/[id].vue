@@ -43,8 +43,4 @@ const { data } = await useMicroCMSGetListDetail<Blog>({
   </NuxtLink>
 </template>
 
-<style>
-h2 {
-  background-color: #00f;
-}
-</style>
+<style></style>
