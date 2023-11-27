@@ -54,9 +54,4 @@ const { data } = await useMicroCMSGetList<Blog>({
       問い合わせ
     </button>
   </NuxtLink>
-
-  <!-- 
-  <p>ページ内で生成 : {{ yearMonth }}</p>
-  <p>ページでインスタンス生成 : {{ today }}</p>
-  <p>プラグインで生成 : {{ $day }}</p> -->
 </template>

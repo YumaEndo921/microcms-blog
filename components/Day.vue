@@ -7,5 +7,5 @@ const { data: time } = useAsyncData(async () => {
 </script>
 
 <template>
-  <p>現在の時刻: {{ time }}</p>
+  <p>最終更新: {{ time }}</p>
 </template>
