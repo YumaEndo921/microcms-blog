@@ -22,19 +22,19 @@ export default defineNuxtConfig({
   ],
   // ssr:true,
 
-  nitro: {
-    prerender: {
-      crawlLinks: true,
-      routes: ["/", "/test"],
-      ignore: ["/contact"],
-    },
-  },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ["/", "/test"],
+  //     ignore: ["/contact"],
+  //   },
+  // },
   experimental: {
     payloadExtraction: true,
   },
-  // routeRules: {
-  //   "/": { ssr: true, prerender: false },
-  //   "/[id]": { ssr: true, prerender: false },
-  //   "/contact": { ssr: true, prerender: false },
-  // },
+  routeRules: {
+    "/": { ssr: true, prerender: true },
+    "/[id]": { ssr: true, prerender:true },
+    "/contact": { ssr: true, prerender: true },
+  },
 });
