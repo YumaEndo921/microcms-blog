@@ -16,6 +16,15 @@ const { data } = await useMicroCMSGetList<Blog>({
 // const { data } = await useFetch("/api/test2");
 // const { $responce } = useNuxtApp();
 // const data = $responce;
+useHead({
+  title: "mamelib | トップページ",
+  meta: [
+    {
+      name: "description",
+      content: "トップページ",
+    },
+  ],
+});
 </script>
 <template>
   <Day />
