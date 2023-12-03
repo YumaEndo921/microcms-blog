@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         {
-          hid: "description",
+          // hid: "description",
           name: "description",
           content: "未経験から転職してエンジニアになった人間の書き残しです。",
         },
