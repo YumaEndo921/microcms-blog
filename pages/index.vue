@@ -28,7 +28,7 @@ useHead({
 </script>
 <template>
   <Day />
-  <h1 class="text-center font-sans text-4xl font-semibold">勉強まとめブログ</h1>
+  <h1 class="text-center font-sans text-4xl font-semibold">ブログ</h1>
   <ul class="mt-16 grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink
